@@ -33,23 +33,21 @@ Navigate to the SHARPIE directory and install the required packages:
    cd SHARPIE
    pip install -r requirements.txt
 
-Creating recipes
+Run in development mode
 ----------------
 
-To retrieve a list of random ingredients,
-you can use the ``lumache.get_random_ingredients()`` function:
+Start the web server:
 
-.. autofunction:: lumache.get_random_ingredients
+.. code-block:: console
 
-The ``kind`` parameter should be either ``"meat"``, ``"fish"``,
-or ``"veggies"``. Otherwise, :py:func:`lumache.get_random_ingredients`
-will raise an exception.
+   cd webserver
+   python manage.py runserver
 
-.. autoexception:: lumache.InvalidKindError
+In another terminal, start the runner:
 
-For example:
+.. code-block:: console
 
->>> import lumache
->>> lumache.get_random_ingredients()
-['shells', 'gorgonzola', 'parsley']
+   cd runner
+   python manage.py runserver
 
+You can access the website at http://localhost:8000 and manage the authorized users from http://localhost:8000/admin with the username "admin" and password "password". For now there is no experiment available but you can find some examples ready to use in our `galery <https://github.com/hybrid-intelligence/SHARPIE_Gallery/>`_!
