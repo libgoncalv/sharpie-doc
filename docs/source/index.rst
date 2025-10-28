@@ -20,5 +20,5 @@ Contents
 .. toctree::
 
    usage
-   api
+   faq
    glossary
