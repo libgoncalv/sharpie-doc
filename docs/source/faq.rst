@@ -3,11 +3,11 @@ FAQ (Frequently Asked Questions)
 
 How long will SHARPIE be supported?
 --------------------------------
-SHARPIE is currently under active development we will continue do so until the end of the `HI center <https://www.hybrid-intelligence-centre.nl/>_` in 2029.
+SHARPIE is currently under active development we will continue do so until the end of the `HI center <https://www.hybrid-intelligence-centre.nl/>`_ in 2029.
 
 Can SHARPIE integrate with environment X?
 --------------------------------
-SHARPIE integrates with any environment that implements the `Gymnasium API <https://gymnasium.farama.org/api/env/>_`: SHARPIE needs access to `step()`, `reset()` and `render()` functions. Since SHARPIE runs the environment on a back-end server rather than in the browser, it supports any environment with Python bindings to these functions.
+SHARPIE integrates with any environment that implements the `Gymnasium API <https://gymnasium.farama.org/api/env/>`_: SHARPIE needs access to `step()`, `reset()` and `render()` functions. Since SHARPIE runs the environment on a back-end server rather than in the browser, it supports any environment with Python bindings to these functions.
 
 What are the computational requirements for SHARPIE?
 --------------------------------
