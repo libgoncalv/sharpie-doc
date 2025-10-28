@@ -1,3 +1,6 @@
+FAQ (Frequently Asked Questions)
+=====
+
 How long will SHARPIE be supported?
 --------------------------------
 SHARPIE is currently under active development we will continue do so until the end of the `HI center <https://www.hybrid-intelligence-centre.nl/>_` in 2029.
