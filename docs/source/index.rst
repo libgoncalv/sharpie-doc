@@ -8,7 +8,7 @@ Reinforcement learning offers a general approach for modeling and training AI ag
 It empowers researchers to study a wide variety of research questions related to the interaction between humans and RL agents, including those related to interactive reward specification and learning, learning from human feedback, action delegation, preference elicitation, user-modeling, and human-AI teaming. The platform is based on a generic interface for human-RL interactions that aims to standardize the field of study on RL in human contexts.
 
 Check out the :doc:`usage` section for further information, including
-how to :ref:`installation` the project.
+the :ref:`installation` of the project.
 
 .. note::
 
