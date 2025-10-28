@@ -2,12 +2,12 @@
 
 # -- Project information
 
-project = 'Lumache'
-copyright = '2021, Graziella'
-author = 'Graziella'
+project = 'SHARPIE'
+copyright = '2025, Hybrid Intelligence'
+author = 'SHARPIE Development Team'
 
-release = '0.1'
-version = '0.1.0'
+release = '0.2'
+version = '2.0.0'
 
 # -- General configuration
 
