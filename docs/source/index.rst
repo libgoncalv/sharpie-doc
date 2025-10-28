@@ -19,6 +19,7 @@ Contents
 
 .. toctree::
 
+   overview
    usage
    faq
    glossary
