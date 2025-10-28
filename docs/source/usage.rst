@@ -7,23 +7,27 @@ Installation
 ------------
 
 To use SHARPIE, we highly recommend to use a virtual environment such as Anaconda. If you have already installed Anaconda:
+
 .. code-block:: console
 
    conda create -n sharpie_env python=3.11
    conda activate sharpie_env
 
 Then, git clone the SHARPIE repository:
+
 .. code-block:: console
 
    git clone https://github.com/hybrid-intelligence/SHARPIE.git
 
 Install Redis server:
+
 .. code-block:: console
 
    # On Ubuntu
    sudo apt-get install redis-server & redis-server
 
 Navigate to the SHARPIE directory and install the required packages:
+
 .. code-block:: console
 
    cd SHARPIE
