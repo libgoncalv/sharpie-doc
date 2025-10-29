@@ -20,14 +20,14 @@ The runner is responsible for managing the execution of experiments. The runner 
 
 * **Manager**: intitializing and running environments and AI agents.
 * **Experiment**: per experiment wrappers for RL environments and algorithms.
-     * Environment: environment wrapper, input mapping and termination condition.
-     * Agent: agent(s) wrapper.
+    * Environment: environment wrapper, input mapping and termination condition.
+    * Agent: agent(s) wrapper.
 
 Interaction diagram
 ----------------
 
 The following diagram illustrates the interaction between the web server, runner and participant during an experiment.
 
-.. image:: /images/overview.png
+.. image:: ../images/overview.png
     :width: 600
     :alt: SHARPIE overview diagram
