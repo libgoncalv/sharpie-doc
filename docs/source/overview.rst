@@ -28,6 +28,6 @@ Interaction diagram
 
 The following diagram illustrates the interaction between the web server, runner and participant during an experiment.
 
-.. image:: _static/overview.png
+.. image:: /images/overview.png
     :width: 600
     :alt: SHARPIE overview diagram
