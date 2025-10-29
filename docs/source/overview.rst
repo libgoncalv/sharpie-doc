@@ -37,6 +37,7 @@ There are 3 main types of interactions:
 2. **User - Web server**: all users interact with SHARPIE throught their web browser using HTTP(s) requests to the web server. Once a participant starts an experiment, the web server sends them the experiment interface and connects them to the Experiment WebSocket. The participant will then wait for the runner to send the first observation.
 3. **User - Web server - Runner**: 
     During the experiment, the participant interacts with the web interface, which sends their actions to the web server using the Experiment WebSocket. The web server forwards these actions to the runner, which processes them in the environment and sends back the new observations, rewards, and done flags. In summary, the communication is as follows:
+    
     1. Participant connects to the Experiment WebSocket.
     2. Runner connects to the Experiment WebSocket, prepare the environment, AI agents and sends the rendered observation.
     3. Web server forwards the observation to the participant and logs the interaction in the database.
