@@ -43,4 +43,5 @@ There are 3 main types of interactions:
     3. Web server forwards the observation to the participant and logs the interaction in the database.
     4. Participant sends an action through the Experiment WebSocket.
     5. Web server forwards the action to the runner which processes it in the environment and sends back the new observation, reward, etc.
+    
     Steps 3 to 5 are repeated until the episode is over. The user and runner then disconnect from the Experiment WebSocket, and the runner goes back to the Queue WebSocket.
