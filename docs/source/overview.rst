@@ -19,9 +19,8 @@ Runner
 The runner is responsible for managing the execution of experiments. The runner communicates with the web server to provide real-time updates and receive participant inputs. It is designed to be modular and extensible, allowing researchers to easily integrate new environments and algorithms by using simple wrappers. It is divided in several modules:
 
 * **Manager**: intitializing and running environments and AI agents.
-* **Experiment**: per experiment wrappers for RL environments and algorithms.
-    * Environment: environment wrapper, input mapping and termination condition.
-    * Agent: agent(s) wrapper.
+* **Environment (per experiment)**: environment wrapper, input mapping and termination condition.
+* **Agent (per experiment)**: agent(s) wrapper.
 
 Interaction diagram
 ----------------
@@ -31,3 +30,15 @@ The following diagram illustrates the interaction between the web server, runner
 .. image:: ../images/overview.png
     :width: 600
     :alt: SHARPIE overview diagram
+
+There are 3 main types of interactions:
+
+1. **Runner - Web server**: once the runner is started, it connects to the Queue WebSocket of the web server and regularly asks if a new experiment is witing in the queue. When an experiment is available, the web server sends its configuration to the runner, and the runner disconnects from the Queue WebSocket and connects to the Experiment WebSocket.
+2. **User - Web server**: all users interact with SHARPIE throught their web browser using HTTP(s) requests to the web server. Once a participant starts an experiment, the web server sends them the experiment interface and connects them to the Experiment WebSocket. The participant will then wait for the runner to send the first observation.
+3. **User - Web server - Runner**: during the experiment, the participant interacts with the web interface, which sends their actions to the web server using the Experiment WebSocket. The web server forwards these actions to the runner, which processes them in the environment and sends back the new observations, rewards, and done flags. In summary, the communication is as follows:
+    1. Participant connects to the Experiment WebSocket.
+    2. Runner connects to the Experiment WebSocket, prepare the environment, AI agents and sends the rendered observation.
+    3. Web server forwards the observation to the participant and logs the interaction in the database.
+    4. Participant sends an action through the Experiment WebSocket.
+    5. Web server forwards the action to the runner which processes it in the environment and sends back the new observation, reward, etc.
+    6. Steps 3 to 5 are repeated until the episode is over.
